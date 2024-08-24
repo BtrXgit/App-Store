@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:store/routes/homepage.dart';
-import 'package:store/test.dart';
+import 'package:store/themes/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // home: StoreHomePage(),
-      home: LofiMusicPlayer(),
+      theme: darkTheme,
+      darkTheme: darkTheme,
+      home: StoreHomePage(),
     );
   }
 }
