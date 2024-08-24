@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 List<String> appsImages = [
@@ -107,8 +108,8 @@ Widget _listApps({
               topLeft: Radius.circular(20),
               topRight: Radius.circular(20),
             ),
-            child: Image.network(
-              imageUrl,
+            child: CachedNetworkImage(
+              imageUrl: imageUrl,
               fit: BoxFit.cover,
               width: double.infinity,
               height: 170,
@@ -120,8 +121,8 @@ Widget _listApps({
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(14),
-                  child: Image.network(
-                    appIcon,
+                  child: CachedNetworkImage(
+                    imageUrl: appIcon,
                     width: 40,
                     height: 40,
                   ),
