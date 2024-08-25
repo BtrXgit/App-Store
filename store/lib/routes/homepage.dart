@@ -60,14 +60,21 @@ class _StoreHomePageState extends State<StoreHomePage> {
 
 Widget _appBar(BuildContext context) {
   return Padding(
-    padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Row(
           children: [
+            Image.asset(
+              'assets/logo.png',
+              height: 30,
+            ),
+            SizedBox(
+              width: 4,
+            ),
             Text(
-              "LA Store",
+              "Store",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 20,
@@ -92,7 +99,7 @@ Widget _listApps({
   required String appName,
 }) {
   return Padding(
-    padding: const EdgeInsets.only(left: 20.0, right: 20, top: 10),
+    padding: const EdgeInsets.only(left: 20.0, right: 20, top: 10, bottom: 10),
     child: Container(
       height: 238, // Adjusted height to avoid overflow
       width: MediaQuery.of(context).size.width,
