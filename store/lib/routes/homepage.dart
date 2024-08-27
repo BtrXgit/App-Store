@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:store/routes/appDetails.dart';
 
 List<String> appsImages = [
   'https://cdn2.unrealengine.com/fortnite-og-social-1920x1080-a5adda66fab9.jpg',
@@ -43,11 +44,24 @@ class _StoreHomePageState extends State<StoreHomePage> {
                 child: ListView.builder(
                     itemCount: appIcons.length,
                     itemBuilder: (BuildContext context, index) {
-                      return _listApps(
-                          context: context,
-                          imageUrl: appsImages[index],
-                          appIcon: appIcons[index],
-                          appName: appNames[index]);
+                      return GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => AppDetails(
+                                appImage: appsImages[index],
+                                appName: appNames[index],
+                                appIcon: appIcons[index],
+                              ),
+                            ),
+                          );
+                        },
+                        child: _listApps(
+                            context: context,
+                            imageUrl: appsImages[index],
+                            appIcon: appIcons[index],
+                            appName: appNames[index]),
+                      );
                     }),
               )
             ],
@@ -68,13 +82,13 @@ Widget _appBar(BuildContext context) {
           children: [
             Image.asset(
               'assets/logo.png',
-              height: 30,
+              height: 34,
             ),
             SizedBox(
               width: 4,
             ),
             Text(
-              "Store",
+              "STORE",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 20,
@@ -105,7 +119,7 @@ Widget _listApps({
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.secondary,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(14),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
