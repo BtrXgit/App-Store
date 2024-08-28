@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "196849573136",
+    "project_id": "infinity-store1",
+    "storage_bucket": "infinity-store1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196849573136:android:a64589d8a4346ea65dd995",
+        "android_client_info": {
+          "package_name": "lucxd.apps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr81lTsvlE3_kCbDknJolu5t8nvzAiZ3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
