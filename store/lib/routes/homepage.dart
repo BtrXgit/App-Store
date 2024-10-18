@@ -1,26 +1,25 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:store/routes/appDetails.dart';
 
 List<String> appsImages = [
-  'https://cdn2.unrealengine.com/fortnite-og-social-1920x1080-a5adda66fab9.jpg',
-  'https://media.newyorker.com/photos/590977c9019dfc3494ea2f7f/master/pass/Johnston-Clash-Clans.jpg',
-  'https://cdn2.unrealengine.com/egs-fallguys-mediatonic-g1a-00-1920x1080-75b891d04ff9.jpg',
-  'https://hyperpc.ae/images/support/articles/pc-for-gta-5/article-gta-5-banner.jpg',
+  'assets/screenshots/moonie.png',
+  'assets/screenshots/1.png',
+  'assets/screenshots/Luca.png',
+  'assets/screenshots/1.png',
 ];
 
 List<String> appIcons = [
-  'https://upload.wikimedia.org/wikipedia/commons/7/7c/Fortnite_F_lettermark_logo.png',
-  'https://play-lh.googleusercontent.com/LByrur1mTmPeNr0ljI-uAUcct1rzmTve5Esau1SwoAzjBXQUby6uHIfHbF9TAT51mgHm',
-  'https://cdn2.steamgriddb.com/icon/5d7bc0a1b56b6b05df25ba38b98ca60d.png',
-  'https://e7.pngegg.com/pngimages/392/551/png-clipart-grand-theft-auto-five-illustration-grand-theft-auto-v-grand-theft-auto-san-andreas-gta-5-online-gunrunning-playstation-4-mod-gta-miscellaneous-emblem.png',
+  'assets/moonie.png',
+  'assets/luca.png',
+  'assets/luca.png',
+  'assets/luca.png',
 ];
 
 List<String> appNames = [
-  'Fortnite',
-  'Clash of Clans',
-  'Fall Guys',
-  'GTA 5',
+  'Moonie',
+  'Luca',
+  'Infinity',
+  'Inspirio',
 ];
 
 class StoreHomePage extends StatefulWidget {
@@ -129,8 +128,8 @@ Widget _listApps({
               topLeft: Radius.circular(20),
               topRight: Radius.circular(20),
             ),
-            child: CachedNetworkImage(
-              imageUrl: imageUrl,
+            child: Image.asset(
+              imageUrl,
               fit: BoxFit.cover,
               width: double.infinity,
               height: 170,
@@ -142,8 +141,8 @@ Widget _listApps({
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(14),
-                  child: CachedNetworkImage(
-                    imageUrl: appIcon,
+                  child: Image.asset(
+                    appIcon,
                     width: 40,
                     height: 40,
                   ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:store/firebase_options.dart';
 import 'package:store/routes/homepage.dart';
 import 'package:store/themes/theme.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: darkTheme,
       darkTheme: darkTheme,
       home: const StoreHomePage(),
