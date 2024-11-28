@@ -1,26 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:store/data/homepage_data.dart';
 import 'package:store/routes/appDetails.dart';
-
-List<String> appsImages = [
-  'assets/screenshots/moonie.png',
-  'assets/screenshots/1.png',
-  'assets/screenshots/Luca.png',
-  'assets/screenshots/1.png',
-];
-
-List<String> appIcons = [
-  'assets/moonie.png',
-  'assets/luca.png',
-  'assets/luca.png',
-  'assets/luca.png',
-];
-
-List<String> appNames = [
-  'Moonie',
-  'Luca',
-  'Infinity',
-  'Inspirio',
-];
 
 class StoreHomePage extends StatefulWidget {
   const StoreHomePage({super.key});
